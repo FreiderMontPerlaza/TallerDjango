@@ -1,0 +1,53 @@
+{% extends 'app/base.html'%}
+
+<!--Importamos la funcion load static para leer los archivos de estats imagenes en home-->
+{% load static %}
+
+{% block contenido %}
+
+<!--Contenido home-->
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4 col-log-2 borde">
+      <div><span>José: Escultura, Obras y Exposiciones </span></div>
+      <a class="nav-link" href="/artista/">
+        <img class="w-100" src="{% static '/images/ARTISTA_1.jpg' %}"
+      /></a>
+    </div>
+    <div class="col-sm-4 col-log-2 borde">
+      <div><span>Manuel: Pintor, Obras y Exposiciones </span></div>
+      <a class="nav-link" href="/artista2/">
+        <img class="w-100" src="{% static 'app/images/ARTISTA_15.jpg' %}"
+      /></a>
+    </div>
+    <div class="col-sm-4 col-log-2 borde">
+      <div>
+        <span>Kumerasaki: Arte Abstracto, Obras y Exposiciones </span>
+      </div>
+      <a class="nav-link" href="/artista3/">
+        <img class="w-100" src="{% static 'app/images/ARTISTA_21.jpg' %}"
+      /></a>
+    </div>
+    <div class="col-sm-4 col-log-2 borde">
+      <div><span>Jhin: Arte Callejero, Obras y Exposiciones </span></div>
+      <a class="nav-link" href="/artista4/">
+        <img class="w-100" src="{% static 'app/images/ARTISTA_4.jpg' %}"
+      /></a>
+    </div>
+    <div class="col-sm-4 col-log-2 borde">
+      <div><span>Jhon: Pintor, Obras y Exposiciones </span></div>
+      <a class="nav-link" href="/artista5/">
+        <img class="w-100" src="{% static 'app/images/ARTISTA_14.jpg' %}"
+      /></a>
+    </div>
+    <div class="col-sm-4 col-log-2 borde">
+      <div><span>Florencia: Telar, Obras y Exposiciones </span></div>
+      <a class="nav-link" href="/artista6/">
+        <img class="w-100" src="{% static 'app/images/ARTISTA_1_2.jpg' %}"
+      /></a>
+    </div>
+  </div>
+  <!-- EN IMG CLASS W-50 0 W-100 O W-AUTO ES EL TAMAÑO QUE TOMARA LA IMAGEN DENTRO DE SU CONTENEDOR -->
+</div>
+{% endblock %}

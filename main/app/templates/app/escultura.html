@@ -1,0 +1,49 @@
+{% extends 'app/base.html'%}
+
+{% load static %}
+
+{% block contenido %}
+
+
+<div class="container">
+    <h3>Algunas de nuestras esculturas más destacadas:</h3>
+    <br />
+    <div class="row">
+      <div class="col-sm-4 col-log-2 borde">
+        <div><span>Pieza Interior por José Álvarez</span></div>
+        <a class="nav-link" href="/artista/">
+          <img class="w-100" src="{% static 'app/images/escultura11.jfif' %}"
+        /></a>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, modi! Quos saepe incidunt expedita adipisci debitis? Officiis quis voluptatum nesciunt, perferendis omnis dolor, ad quae fugiat dicta vel tenetur numquam? , Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam dolor vel minus, corrupti, enim unde recusandae sint sequi aliquam nesciunt quo mollitia ab sunt cupiditate at voluptatibus facere, exercitationem porro.</p>
+      </div>
+
+      <br><br>
+
+
+      <br />
+      <div class="col-sm-4 col-log-2 borde">
+        <div><span>Liderato por José Álvarez</span></div>
+        <a class="nav-link" href="/artista/">
+          <img class="w-100" src="{% static 'app/images/escultura12.jpg' %}"
+        /></a>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque dolore omnis ratione accusamus vero fugiat, laboriosam consequatur? Esse minus voluptates, quam atque, quaerat corporis perferendis non obcaecati veniam, laboriosam officiis!
+        Tempore ab voluptatibus dolore, dolores repellendus temporibus nobis. Libero ipsa delectus impedit, modi vel dignissimos reiciendis, animi quaerat autem natus non mollitia maxime illo debitis necessitatibus veniam quae laboriosam odit.</p>
+      </div>
+
+      <br />
+      <div class="col-sm-4 col-log-2 borde">
+        <div>
+          <span>Tiempo por José Álvarez</span>
+        </div>
+        <a class="nav-link" href="/artista/">
+          <img class="w-100" src="{% static 'app/images/escultura13.jpg' %}"
+        /></a>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet omnis repudiandae distinctio magnam dolorem itaque enim labore. Necessitatibus dignissimos eum explicabo facere similique, expedita modi dolores, vero voluptate ab nobis.</p>
+      </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

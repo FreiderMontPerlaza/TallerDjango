@@ -1,0 +1,64 @@
+{% extends 'app/base.html'%}
+
+{% load static %}
+
+{% block contenido %}
+
+
+<div class="container ">
+    <h3>Tenemos pinturas alucinantes:</h3>
+    <br />
+    <div class="row">
+      <div class="col-sm-4 col-log-2 borde">
+        <div><span>Vacío por Manuel Piña</span></div>
+        <a class="nav-link" href="/artista2/">
+          <img class="w-100" src="{% static 'app/images/pintura21.jpg' %}"
+        /></a>
+      </div>
+      <br />
+      <div class="col-sm-4 col-log-2 borde">
+        <div><span>Contemporáneo por Manuel Piña</span></div>
+        <a class="nav-link" href="/artista2/">
+          <img class="w-100" src="{% static 'app/images/pintura22.jfif' %}"
+        /></a>
+      </div>
+      <br />
+      <div class="col-sm-4 col-log-2 borde">
+        <div>
+          <span>Lleno por Manuel Piña</span>
+        </div>
+        <a class="nav-link" href="/artista2/">
+          <img class="w-100" src="{% static 'app/images/pintura23.jpg' %}"
+        /></a>
+      </div>
+      <br />
+
+      <div class="col-sm-4 col-log-2 borde">
+        <div><span>Soul Soul por Kumerazaki Ozuki</span></div>
+        <a class="nav-link" href="/artista3/">
+          <img class="w-100" src="{% static 'app/images/abstracto31.jpg' %}"
+        /></a>
+      </div>
+
+      <div class="col-sm-4 col-log-2 borde">
+        <div><span>le´ista por Kumerazaki Ozuki</span></div>
+        <a class="nav-link" href="/artista3/">
+          <img class="w-100" src="{% static 'app/images/abstracto32.jpg' %}"
+        /></a>
+      </div>
+
+      <div class="col-sm-4 col-log-2 borde">
+        <div><span>Incierto por Kumerazaki Ozuki</span></div>
+        <a class="nav-link" href="/artista3/">
+          <img class="w-100" src="{% static 'app/images/abstracto33.jpg' %}"
+        /></a>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+
+
+
+  {% endblock %}

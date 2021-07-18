@@ -1,0 +1,58 @@
+{% extends 'app/base.html' %}
+
+{% load static %}
+
+{% block contenido %}
+
+<div class="container">
+    <h3>¿Te faltan ideas creativas? Nosotros te ayudamos con algunas:</h3>
+    <br />
+    <div class="row">
+      <div class="col-sm-4 col-log-2 borde">
+        <div><span>Aprende a hacer origami</span></div>
+        <a class="nav-link" href="#">
+          <img class="w-100" src="{% static 'app/images/img_origami.jpg ' %}"
+        /></a>
+      </div>
+      <br />
+      <div class="col-sm-4 col-log-2 borde">
+        <div><span>Aprende alfarería</span></div>
+        <a class="nav-link" href="#">
+          <img class="w-100" src="{% static 'images/alfareria.jpg' %}"
+        /></a>
+      </div>
+      <br />
+      <div class="col-sm-4 col-log-2 borde">
+        <div>
+          <span>Aprende orfebrería</span>
+        </div>
+        <a class="nav-link" href="#">
+          <img class="w-100" src="{% static 'app/images/img_orfebreria_2.jpg' %}"
+        /></a>
+      </div>
+      <br />
+      <div class="col-sm-4 col-log-2 borde">
+        <div><span>Aprende a esculpir</span></div>
+        <a class="nav-link" href="#">
+          <img class="w-100" src="{% static 'images/esculpir.jpg' %}"
+        /></a>
+      </div>
+      <div class="col-sm-4 col-log-2 borde">
+        <div><span>Aprende xilografía</span></div>
+        <a class="nav-link" href="#">
+          <img class="w-100" src="{% static 'app/images/img_xilografia_3.jpg' %}"
+        /></a>
+      </div>
+      <div class="col-sm-4 col-log-2 borde">
+        <div><span>Aprende a dibujar</span></div>
+        <a class="nav-link" href="#">
+          <img class="w-100" src="{% static 'app/images/img_dibujo_4.jpg' %}"
+        /></a>
+      </div>
+    </div>
+  </div>
+</body>
+
+
+
+{% endblock %}

@@ -1,0 +1,131 @@
+{% extends 'app/base.html'%}
+
+{% load static %}
+
+{% block contenido %}
+
+
+
+
+    <div class="container descripcion">
+        <header class="article-header">
+          <h1 class="article-title">
+            <br />
+            José Álvarez
+          </h1>
+        </header>
+        <div class="row">
+          <div class="col-sm-12 col-lg-6">
+            <br />
+            <img src="{% static '/app/images/ARTISTA_1_2.jpg' %} "alt="">
+          </div>
+          <div class=" col-sm-12 col-lg-6" style="color: white; font-size: 24px;">
+            <br />
+            José Álvarez Lastra, escultor. Nació en Valparaíso, Chile, el 1° de
+            febrero de 1965. Se inició en los talleres de dibujo de la Escuela de
+            Bellas Artes de la universidad de Chile y entre los años 1974 y 1977
+            realizó estudios en la Escuela de Arte de la Universidad de Chile.
+            Entre 1988 y 1993 se radicó en New York, Estados Unidos donde tuvo la
+            oportunidad de experimentar con nuevas técnicas escultóricas y
+            materiales de fundición. Trabajó como escultor ofreciendo su trabajo
+            para diversas galerías y encargos. Dio clases de teoría del Arte en el
+            Community College de Harlem, New York. Expuso sus trabajos en varias
+            ciudades, especialmente en Boston, ciudad en la que residió desde 1996
+            al 2000. Ha participado como artista invitado y organizador de
+            importantes eventos que marcaron hitos en el arte de la década de los
+            noventa y principio de los dos mil en Latinoamérica y Estados Unidos,
+            entre ellos los Encuentros de Arte Industria y los Talleres de
+            Escultura en acero.
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+          <div class="row">
+              <div class="col">
+                  <h2>Lorem ipsum dolor </h2>
+                  <br>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam voluptatibus suscipit laborum deleniti eum, dolore optio labore nesciunt placeat aliquam cum, ducimus inventore commodi nihil? Incidunt maxime dolores ut velit
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ipsam quidem placeat consectetur accusamus nobis ab adipisci ex nemo sunt tempore unde obcaecati voluptas ipsum, animi voluptatibus amet numquam porro.
+                  </p>
+              </div>
+            </div>
+      </div>
+  
+      <div
+        id="carouselFull"
+        class="container carousel slide especificacion"
+        data-ride="carousel"
+      >
+        <ol class="carousel-indicators">
+          <li
+            data-target="#carouselIndicators"
+            data-slide-to="0"
+            class="active"
+          ></li>
+          <li data-target="#carouselIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselIndicators" data-slide-to="2"></li>
+        </ol>
+  
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <a class="nav-link" href="#"
+              ><img
+                class="imagen"
+                src="{% static 'app/images/escultura11.jfif' %}"
+                alt=""
+            /></a>
+  
+            <div class="carousel-caption d-md-block">
+              <h3>Pieza inteior</h3>
+              <p>$690000</p>
+            </div>
+          </div>
+  
+          <div class="carousel-item">
+            <img
+              class="imagen"
+              src="{% static 'app/images/escultura12.jpg' %}"
+              alt=""
+            />
+            <div class="carousel-caption d-md-block">
+              <h3>Liderato</h3>
+              <p>$97000</p>
+            </div>
+          </div>
+  
+          <div class="carousel-item">
+            <img
+              class="imagen"
+              src="{% static 'app/images/escultura13.jpg' %}"
+              alt=""
+            />
+            <div class="carousel-caption d-md-block">
+              <h3>Tiempo</h3>
+              <p>$60000</p>
+            </div>
+          </div>
+        </div>
+  
+        <a
+          class="carousel-control-prev"
+          href="#carouselFull"
+          role="button"
+          data-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#carouselFull"
+          role="button"
+          data-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+  
+{% endblock %}
+  
