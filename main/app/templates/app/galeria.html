@@ -1,12 +1,101 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h2>galeria</h2>
-</body>
-</html>
+{% extends 'app/base.html' %}
+
+{% load static %}
+
+{% block contenido %}
+
+
+<!--card-->
+<br>
+<div class="container ">
+    <h2 class="display-4 text-center ">Productos </h2>
+    <hr style="width: 400px;">
+        <br>
+    <div class="row " style="justify-content: center;">
+
+        {% load humanize %}
+        {% for p in productos %}
+        <!--producto 1-->
+        <div class="card ml-4 mt-4" style="width: 15rem;">
+            {% if p.imagen %}
+            <img class="card-img-top img-fluid"  src="{{ p.imagen.url }}"  alt="producto-imagen">
+            {% endif %}
+            <div class="card-body">
+              <h5 class="card-title">{{p.Marca | capfirst}}</h5>
+              <h3> {{p.nombre | title }} </h3>
+              <h4>${{p.precio | intcomma }} </h4>
+            </div>
+          </div>
+          <br>
+          
+
+<!--
+         
+        <div class="card ml-4 mt-4" style="width: 18rem;">
+            <img class="card-img-top img-fluid"  src="{% static 'images/img10.jpg' %}"  alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Producto 2</h5>
+              <h3>Cuadro del renacer</h3>
+              <h4>$105.000 </h4>
+            </div>
+          </div>
+          <br>
+
+
+         
+        <div class="card ml-4 mt-4" style="width: 18rem;">
+            <img class="card-img-top img-fluid"  src="{% static 'images/img_product_2.jpg' %}"  alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Producto 3</h5>
+              <h3>Cuadro original en oleo </h3>
+              <h4>$45.000 </h4>
+            </div>
+          </div>
+          <br>
+
+
+           
+        <div class="card ml-4 mt-4" style="width: 18rem;">
+            <img class="card-img-top img-fluid"  src="{% static 'images/img2.jpg' %}"  alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Producto 4</h5>
+              <h3>Manualidades joyas</h3>
+              <h4>$85.000 </h4>
+            </div>
+          </div>
+          <br>
+
+
+
+           
+        <div class="card ml-4 mt-4" style="width: 18rem;">
+            <img class="card-img-top img-fluid"  src="{% static 'images/img8.jpg' %}"  alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Producto 5</h5>
+              <h3>Arte conteporaneo</h3>
+              <h4>$25.000 </h4>
+            </div>
+          </div>
+          <br>
+
+
+        <div class="card ml-4 mt-4" style="width: 18rem;">
+            <img class="card-img-top img-fluid"  src="{% static 'images/img7.jpg' %}"  alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Producto 6</h5>
+              <h3>Moda Urban</h3>
+              <h4>$12.400 </h4>
+            </div>
+          </div> 
+          <br>
+        -->
+        {% endfor %}
+    </div>
+</div>
+
+<br><br>
+
+
+{% endblock %}
+
+
