@@ -78,3 +78,13 @@ def modificar_producto(request,id):
 
     return render(request,'app/producto/modificar.html',data)
 
+
+
+
+
+
+def eliminar_producto(request,id):
+    producto = get_object_or_404(Producto,id=id)
+    producto.delete()
+    return redirect(to="listar_producto")
+
