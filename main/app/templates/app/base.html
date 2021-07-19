@@ -200,6 +200,10 @@
 
 
   <div id="contenido">
+
+   
+    
+
     {% block contenido %}
     {% endblock %}
   </div>
@@ -282,6 +286,22 @@
       integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
       crossorigin="anonymous"
     ></script>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    {% if messages %}
+    {% for m in messages %}
+        <script>
+          swal.fire({
+            "title":"Producto",
+            "text":"{{m}}",
+            "icon":"succes"
+          })
+        </script>
+    {% endfor %}
+    {% endif %}
+
+
 
   </body>
 </html>

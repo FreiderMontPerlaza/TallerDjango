@@ -1,6 +1,14 @@
+from django import contrib
+from django import http
+from django.core import paginator
 from django.http import request
+from django.http.response import Http404
 from django.shortcuts import get_object_or_404, render,redirect,get_list_or_404
 from .forms import ProductoForm
+from django.contrib import messages
+from django.core.paginator import Paginator
+from django.http import Http404
+
 
 from .models import Producto
 
@@ -53,9 +61,18 @@ def agregar_producto(request):
 
 def listar_producto(request):
     productos = Producto.objects.all()
+    page = request.GET.get('page',1)
+
+    try:
+        paginator = Paginator(productos,5)
+        productos = paginator.page(page)
+    except:
+        raise Http404
+
 
     data = {
-    'productos':productos
+    'entity':productos,
+    'paginator': paginator
     }
     return render(request,'app/producto/listar.html',data)
 
@@ -73,6 +90,7 @@ def modificar_producto(request,id):
         formulario = ProductoForm(data=request.POST,instance=producto, files=request.FILES)
         if formulario.is_valid():
             formulario.save()
+            messages.success(request,"modificado exitosamente")
             return redirect(to="listar_producto")
         data["form"] = formulario
 
@@ -81,10 +99,9 @@ def modificar_producto(request,id):
 
 
 
-
-
 def eliminar_producto(request,id):
     producto = get_object_or_404(Producto,id=id)
     producto.delete()
+    messages.success(request,"se ha eliminado de la lista")
     return redirect(to="listar_producto")
 
