@@ -1,13 +1,15 @@
 from django import contrib
 from django import http
+from django.contrib.auth.forms import UsernameField
 from django.core import paginator
 from django.http import request
 from django.http.response import Http404
 from django.shortcuts import get_object_or_404, render,redirect,get_list_or_404
-from .forms import ProductoForm
+from .forms import ProductoForm,CustomUserCreationForm
 from django.contrib import messages
 from django.core.paginator import Paginator
 from django.http import Http404
+from django.contrib.auth import authenticate,login
 
 
 from .models import Producto
@@ -90,7 +92,7 @@ def modificar_producto(request,id):
         formulario = ProductoForm(data=request.POST,instance=producto, files=request.FILES)
         if formulario.is_valid():
             formulario.save()
-            messages.success(request,"modificado exitosamente")
+            messages.success(request,"Producto modificado exitosamente")
             return redirect(to="listar_producto")
         data["form"] = formulario
 
@@ -102,6 +104,22 @@ def modificar_producto(request,id):
 def eliminar_producto(request,id):
     producto = get_object_or_404(Producto,id=id)
     producto.delete()
-    messages.success(request,"se ha eliminado de la lista")
+    messages.success(request,"Producto eliminado de la lista")
     return redirect(to="listar_producto")
 
+
+def registro(request):
+    data = {
+        'form':CustomUserCreationForm()
+    }
+
+    if request.method == 'POST':
+        formulario = CustomUserCreationForm(data=request.POST)
+        if formulario.is_valid():
+            formulario.save()
+            user = authenticate(Username=formulario.cleaned_data["username"],password=formulario.cleaned_data["password1"])
+            login(request,user)
+            messages.success(request,"Usuario registrado exitosamente")
+            return redirect(to="home")
+        data['form'] = formulario
+    return render(request,'registration/registro.html',data)

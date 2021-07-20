@@ -73,10 +73,23 @@
               <a class="nav-link" href="{% url 'galeria' %}">galeria</a>
             </li>
             <li class="nav-item mr-4">
-              <a class="nav-link" href="#"
+              <a class="nav-link" href="{% url 'registro' %}"
                 >Registrar Usuario</a
               >
             </li>
+
+            <!--Iniciar seccion-->
+            {% if user.is_authenticated %}
+            <li>
+              <button type="button" class="btn btn-outline-info"><a href="{% url 'logout' %}">Cerrar sesion</a></button>
+
+            </li>
+            
+            {% else %}
+            <li>
+              <button type="button" class="btn btn-outline-info"><a href="{% url 'login' %}">Iniciar sesion</a></button>
+            </li>
+            {% endif %}
           </ul>
         </div>
       </div>
@@ -293,7 +306,7 @@
     {% for m in messages %}
         <script>
           swal.fire({
-            "title":"Producto",
+            
             "text":"{{m}}",
             "icon":"succes"
           })
