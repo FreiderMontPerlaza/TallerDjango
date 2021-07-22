@@ -1,6 +1,6 @@
 from django.http import request
 from django.urls import path
-from .views import artista, artista1, equipo,escultura, galeria, home, manualidades, modificar_producto, pintura,agregar_producto,listar_producto,eliminar_producto,registro
+from .views import artista, artista1, artista2, artista3, equipo,escultura, galeria, home, manualidades, modificar_producto, pintura,agregar_producto,listar_producto,eliminar_producto,registro
 
 urlpatterns = [
     path('',home,name="home"),
@@ -15,8 +15,14 @@ urlpatterns = [
     path('modificar-producto/<id>/',modificar_producto, name="modificar_producto"),
     path('eliminar-producto/<id>/', eliminar_producto, name="eliminar_producto"),
     path('registro/',registro,name="registro"),
-    path('artista1/',artista1,name="artista1")
+    path('artista1/', artista1, name="artista1"),
+    path('artista2/', artista2, name="artista2"),
+    path('artista3/', artista3, name="artista3"),
 
+
+
+
+    
 
 
 

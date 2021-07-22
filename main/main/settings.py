@@ -36,7 +36,7 @@ LOGOUT_REDIRECT_URL = '/'
 
 INSTALLED_APPS = [
     
-    'rest_framework',
+    
     'admin_interface',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'colorfield',
     'django.contrib.humanize',
     'crispy_forms',
+    
       
 
     

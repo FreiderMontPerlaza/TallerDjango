@@ -129,3 +129,10 @@ def registro(request):
 
 def artista1(request):
     return render(request,'app/artista1.html')
+
+def artista2(request):
+    return render(request,'app/artista2.html')
+
+def artista3(request):
+    return render(request,'app/artista3.html')
+
