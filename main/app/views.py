@@ -32,6 +32,8 @@ def galeria(request):
 def manualidades(request):
     return render(request,'app/manualidades.html')
 
+def equipo(request):
+    return render(request,'app/equipo.html')
 
 def escultura(request):
     return render(request,'app/escultura.html') 
@@ -123,3 +125,7 @@ def registro(request):
             return redirect(to="home")
         data['form'] = formulario
     return render(request,'registration/registro.html',data)
+
+
+def artista1(request):
+    return render(request,'app/artista1.html')

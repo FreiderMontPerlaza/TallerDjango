@@ -1,0 +1,15 @@
+.header-content-left img, .header-content-rigth {
+    width: 90%;
+    padding: 1px;
+    border: 8px solid transparent;
+    background: linear-gradient(90deg,#EFA51A,#ce00ce);
+    
+}
+
+.backgroun-box,.background-box-2{
+background-color: #dfdfdf;
+padding: 50px 0 30px 0 ;
+text-align: center;
+margin-top: 40px;
+}
+

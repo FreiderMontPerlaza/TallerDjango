@@ -1,0 +1,68 @@
+{% extends 'app/base.html'%}
+
+{% load static %}
+
+{% block contenido %}
+
+
+
+ <header id="header">
+     <div class="container mt-5">
+         <div class="backgroun-box row">
+             <div class="col-md-6">
+                 <div class="header-content-left">
+                     <img src="{%static '/app/images/ARTISTA_21.jpg' %} " alt="">
+                 </div>
+
+             </div>
+
+             <div class="col-md-6">
+                 <div class="header-content-right">
+                     <h1 class="display-4">Artista numer 1</h1>
+                     <p class="mt-5 text-left">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum dignissimos veniam, quod vitae cumque hic, voluptates ducimus reiciendis in deserunt ipsa est a facilis perferendis beatae praesentium non? Minima, modi!
+                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, ad tempore. Quidem perferendis aliquid nisi velit facilis ipsa obcaecati at necessitatibus neque et nam quaerat laborum ratione, totam culpa illum!
+                     </p>
+
+                     <a href="#" class="btn btn-outline-secondary btn-lg mt-2">Lee mas</a>
+                 </div>
+                 
+            </div>
+         </div>
+     </div>
+     <br>
+ </header>
+
+ <!--testimonial-->
+
+
+   
+    <!--info one-->
+    <section id="info-one mb-2px mt-5px">
+        <div class="background-box-2 container mb-5px">
+            <div class="row">
+   
+                <div class="col-md-6 my-auto">
+                    <h1 class="display-4">Leonel Usll Borjans</h1>
+                    <p class="text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, culpa. Dolor natus, alias fuga, doloremque aliquam recusandae officia placeat voluptate quam non delectus facilis asperiores nostrum mollitia deleniti vitae. Accusamus?
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, fugit eum sed eligendi consectetur libero fuga eaque est harum vitae nam dolorem praesentium alias necessitatibus provident excepturi beatae incidunt. Ducimus.
+                    </p>
+                    <a href="#" class="btn btn-outline-secondary btn-lg mt-2">Lee mas</a>
+               </div>
+
+               <div class="header-content-rigth col-md-6 mt-4px">
+                <div class="img-artista" id="info-left">
+                   <img src="{% static '/app/images/ARTISTA_14.jpg' %} " alt="galeria img" style="width: 100%;">
+                </div>
+
+            </div>
+   
+   
+            </div>
+        </div>
+   
+    </section> 
+    <br><br>
+    
+ </div>
+
+ {% endblock %}
