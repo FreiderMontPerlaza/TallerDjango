@@ -31,6 +31,7 @@ class Producto(models.Model):
 
 
 
+
 opciones_consultas = [
     [0,"consulta"],
     [1,"reclamo"],

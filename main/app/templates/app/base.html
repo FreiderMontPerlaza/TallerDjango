@@ -36,7 +36,7 @@
       class="container navbar navbar-expand-md navbar-dark bg-dark fixed-top"
     >
       <div class="container">
-        <a class="navbar-brand" href="/index/"
+        <a class="navbar-brand" href="{% url 'equipo' %}"
           ><span class="nombre-company"
             ><span class="letter-g">G</span>rupo</span
           >&nbsp;Cero</a
@@ -236,7 +236,7 @@
                 <li>
                   <a
                     class=""
-                    href="/registrar_solicitud_contacto/"
+                    href="{% url 'registro' %}"
                     title="Contáctenos"
                     >Contáctenos</a
                   >
@@ -258,7 +258,7 @@
                 </li>
 
                 <li>
-                  <a class="t" href="#" title="Contactos ">Contactos </a>
+                  <a class="t" href="#" title="{% url 'registro' %} ">Contactos </a>
                 </li>
               </ul>
             </div>
